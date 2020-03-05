@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const fire = event => {
     const target = event.target;
     if(target.classList.length > 0 || target.tagName !== 'TD') return;
+    if(game.shipCount < 1) return;
     show.miss(target);
     play.updateData = 'shot';
 
